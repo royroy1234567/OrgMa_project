@@ -1,0 +1,59 @@
+body {
+            font-family: 'DM Sans', sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Fraunces', serif;
+        }
+        
+        /* Modal Animation */
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .modal-content {
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        /* Backdrop Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .modal-backdrop {
+            animation: fadeIn 0.2s ease-out;
+        }
+        
+        /* Success Checkmark Animation */
+        @keyframes checkmark {
+            0% {
+                stroke-dashoffset: 100;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        .checkmark-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            animation: checkmark 0.6s cubic-bezier(0.65, 0, 0.45, 1) 0.3s forwards;
+        }
+        
+        .checkmark-check {
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: checkmark 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+        }

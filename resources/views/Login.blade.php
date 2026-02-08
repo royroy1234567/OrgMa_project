@@ -61,10 +61,11 @@
 
         <!-- Login Button -->
         <button
-            type="submit"
+            type="submit" 
             class="w-full sm:w-auto block bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-xl px-6 sm:px-9 py-3 sm:py-4 mx-auto transition"
         >
             Continue to login
+            
         </button>
     </form>
 
