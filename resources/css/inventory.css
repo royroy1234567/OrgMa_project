@@ -1,0 +1,452 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+/* ========================================
+   INVENTORY PAGE STYLES
+   ======================================== */
+
+
+
+/* Header Styles */
+
+/* Page Section */
+.page-section {
+    @apply px-6 py-6;
+}
+
+.section-title {
+    @apply text-lg font-semibold text-slate-800 mb-4;
+}
+
+/* Stats Grid */
+.stats-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5;
+}
+
+.stat-card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
+}
+
+.stat-content {
+    @apply flex items-center justify-between;
+}
+
+.stat-info {
+    @apply flex flex-col gap-2;
+}
+
+.stat-label {
+    @apply text-sm text-slate-500 font-medium;
+}
+
+.stat-value {
+    @apply text-3xl font-bold text-slate-800;
+}
+
+.stat-value.green {
+    @apply text-emerald-600;
+}
+
+.stat-value.orange {
+    @apply text-amber-600;
+}
+
+.stat-value.red {
+    @apply text-rose-600;
+}
+
+.stat-icon {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center;
+}
+
+.stat-icon.blue {
+    @apply bg-blue-100 text-blue-600;
+}
+
+.stat-icon.green {
+    @apply bg-emerald-100 text-emerald-600;
+}
+
+.stat-icon.orange {
+    @apply bg-amber-100 text-amber-600;
+}
+
+.stat-icon.red {
+    @apply bg-rose-100 text-rose-600;
+}
+
+/* Table Container */
+.table-container {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden p-8;
+}
+
+/* Tabs */
+.tabs {
+    @apply flex gap-2 p-4 border-b border-slate-200;
+}
+
+.tab {
+    @apply px-5 py-2.5 text-sm font-medium rounded-lg transition-all duration-200;
+    @apply text-slate-600 hover:text-blue-600 hover:bg-blue-50;
+}
+
+.tab.active {
+    @apply bg-blue-600 text-white shadow-sm;
+}
+
+/* Table Controls */
+.table-controls {
+    @apply flex items-center justify-between gap-4 p-4 border-b border-slate-200 flex-wrap;
+}
+
+.search-box-table {
+    @apply relative flex items-center flex-1 min-w-[300px];
+}
+
+.search-box-table .search-icon {
+    @apply absolute left-3 text-black pointer-events-none;
+}
+
+.search-box-table .search-input {
+    @apply w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm placeholder:text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all;
+}
+
+.table-actions {
+    @apply flex items-center gap-2;
+}
+
+.btn-secondary {
+    @apply flex items-center gap-2 px-4 py-2.5 bg-white border border-slate-200 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50 hover:border-blue-300 transition-all duration-200;
+}
+
+.btn-secondary svg {
+    @apply w-4 h-4;
+}
+
+/* Table */
+.table-wrapper {
+    @apply overflow-x-auto;
+}
+
+.products-table {
+    @apply w-full;
+}
+
+.products-table thead {
+    @apply bg-slate-50 border-b border-slate-200;
+}
+
+.products-table th {
+    @apply px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider;
+}
+
+.products-table tbody tr {
+    @apply border-b border-slate-100 hover:bg-slate-50 transition-colors duration-150;
+}
+
+.products-table td {
+    @apply px-6 py-4 text-sm;
+}
+
+/* Product Cell */
+.product-cell {
+    @apply flex items-center gap-3;
+}
+
+.product-image {
+    @apply w-12 h-12 rounded-lg object-cover border border-slate-200 shadow-sm;
+}
+
+.product-info {
+    @apply flex flex-col gap-1;
+}
+
+.product-name {
+    @apply font-medium text-slate-800;
+}
+
+.product-category {
+    @apply text-xs text-slate-500;
+}
+
+/* Table Data */
+.brand {
+    @apply text-slate-700 font-medium;
+}
+
+.code {
+    @apply text-slate-600;
+}
+
+.code small {
+    @apply text-slate-400;
+}
+
+.quantity {
+    @apply font-semibold text-slate-800;
+}
+
+.price {
+    @apply font-semibold text-slate-800;
+}
+
+/* Status Badges */
+.status-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+.status-badge.in-stock {
+    @apply bg-emerald-100 text-emerald-700;
+}
+
+.status-badge.low-stock {
+    @apply bg-amber-100 text-amber-700;
+}
+
+.status-badge.out-of-stock {
+    @apply bg-rose-100 text-rose-700;
+}
+
+/* Action Buttons */
+.action-buttons {
+    @apply flex items-center gap-1;
+}
+
+.action-btn {
+    @apply p-2 rounded-lg transition-all duration-200 hover:scale-110;
+}
+
+.action-btn.view {
+    @apply text-blue-600 hover:bg-blue-50;
+}
+
+.action-btn.edit {
+    @apply text-amber-600 hover:bg-amber-50;
+}
+
+.action-btn.delete {
+    @apply text-rose-600 hover:bg-rose-50;
+}
+
+/* Pagination */
+.pagination {
+    @apply flex items-center justify-between px-6 py-4 border-t border-slate-200;
+}
+
+.pagination-info {
+    @apply text-sm text-slate-600;
+}
+
+.pagination-controls {
+    @apply flex items-center gap-1;
+}
+
+.pagination-btn {
+    @apply px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200;
+    @apply text-slate-700 hover:bg-slate-100;
+}
+
+.pagination-btn.active {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.pagination-btn:disabled {
+    @apply opacity-50 cursor-not-allowed hover:bg-transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-grid {
+        @apply grid-cols-1;
+    }
+    
+    .stat-card {
+        @apply p-5;
+    }
+    
+    .table-controls {
+        @apply flex-col items-stretch;
+    }
+    
+    .search-box-table {
+        @apply min-w-full;
+    }
+    
+    .table-actions {
+        @apply w-full justify-end;
+    }
+    
+    .pagination {
+        @apply flex-col gap-3 items-start;
+    }
+    
+    .pagination-controls {
+        @apply w-full justify-center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+.create-product-container {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-200 p-8;
+}
+
+.form-title {
+    @apply text-xl font-bold text-slate-800 mb-6 pb-4 border-b border-slate-200;
+}
+
+/* Form Layout */
+.product-form {
+    @apply space-y-6;
+}
+
+.form-layout {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-8;
+}
+
+.form-column {
+    @apply space-y-6;
+}
+
+.media-column {
+    @apply lg:col-span-4;
+}
+
+.info-column {
+    @apply lg:col-span-8;
+}
+
+/* Form Sections */
+.form-section {
+    @apply space-y-4;
+}
+
+.section-label {
+    @apply text-sm font-semibold text-slate-700 mb-3;
+}
+
+.section-title {
+    @apply text-base font-semibold text-slate-800 mb-4;
+}
+
+/* Media Upload */
+.media-upload-main {
+    @apply mb-4;
+}
+
+.upload-preview {
+    @apply w-full aspect-square border-2 border-dashed border-slate-300 rounded-xl bg-slate-50 flex items-center justify-center cursor-pointer hover:border-blue-400 hover:bg-blue-50/50 transition-all duration-200;
+}
+
+.upload-preview:hover .upload-icon {
+    @apply text-blue-500;
+}
+
+.upload-icon {
+    @apply text-slate-300 transition-colors duration-200;
+}
+
+.preview-image {
+    @apply w-full h-full object-cover rounded-xl;
+}
+
+.media-upload-grid {
+    @apply grid grid-cols-3 gap-3;
+}
+
+.upload-preview-small {
+    @apply aspect-square border-2 border-dashed border-slate-300 rounded-lg bg-slate-50 flex items-center justify-center cursor-pointer hover:border-blue-400 hover:bg-blue-50/50 transition-all duration-200;
+}
+
+.upload-preview-small:hover .upload-icon-small {
+    @apply text-blue-500;
+}
+
+.upload-icon-small {
+    @apply text-slate-300 transition-colors duration-200;
+}
+
+.preview-image-small {
+    @apply w-full h-full object-cover rounded-lg;
+}
+
+.hidden {
+    @apply sr-only;
+}
+
+/* Upload Button */
+.btn-upload {
+    @apply w-full flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+
+
+
+select.form-input {
+    @apply cursor-pointer appearance-none bg-no-repeat bg-right pr-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23475569'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-size: 20px;
+    background-position: right 12px center;
+}
+
+.btn-cancel {
+    @apply px-6 py-2.5 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 hover:border-slate-400 transition-all duration-200;
+}
+
+.btn-submit {
+    @apply px-6 py-2.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+
+
+/* Returns Title */
+.returns-title {
+    @apply text-xl font-bold text-slate-800 mb-6 pb-4 border-b  border-b border-slate-200;
+}
+
+/* Returns Table Specific */
+.returns-table thead th {
+    @apply bg-slate-50;
+}
+
+/* Return Status Badge */
+.status-badge.return {
+    @apply bg-rose-100 text-rose-700 font-semibold;
+}
+
+/* Date Text */
+.date-text {
+    @apply text-slate-600 text-sm;
+}
+
+/* Returns Table - Remove action column styles since not present */
+.returns-table tbody tr:hover {
+    @apply bg-slate-50;
+}

@@ -15,7 +15,9 @@
 
     <!-- LEFT: Logo -->
     <div class="flex items-center gap-2">
-      <img src="{{ asset('images/HOME_CENTER1.png') }}" class="w-13 h-13 rounded-full" alt="Logo">
+      <img src="{{ asset('images/HOME_CENTER1.png') }}"
+           class="w-12 h-12 rounded-full"
+           alt="Logo">
     </div>
 
     <!-- CENTER: Search -->
@@ -35,7 +37,7 @@
     </div>
 
     <!-- RIGHT: Desktop Links -->
-    <div class="hidden md:flex items-center gap-6 mr-4">
+    <div class=" md:flex items-center gap-6 mr-4">
       <a href="/Login" class="flex items-center gap-2 text-white font-medium hover:text-gray-300">
         <img src="{{ asset('images/user1.png') }}" class="w-6 h-6">
         Log In
@@ -47,15 +49,16 @@
       </a>
     </div>
 
-    <!-- Burger Menu (Mobile) -->
-    <button id="burgerBtn" class="md:hidden flex items-center">
+    <!-- Burger Menu -->
+    <button id="burgerBtn" class="md:hidden">
       <img src="{{ asset('images/burgermenu.png') }}" class="w-7 h-7" alt="Menu">
     </button>
   </div>
 
   <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="hidden flex-col gap-4 px-6 py-4 md:hidden">
-    <a href="#" class="flex items-center gap-2 text-white">
+  <div id="mobileMenu"
+       class="hidden md:hidden flex-col gap-4 px-6 py-4 bg-[#004AAD] rounded-b-3xl">
+    <a href="/Login" class="flex items-center gap-2 text-white">
       <img src="{{ asset('images/user1.png') }}" class="w-6 h-6">
       Log In
     </a>
@@ -66,6 +69,9 @@
     </a>
   </div>
 </nav>
+
+
+
 
 <!-- Categories -->
 <section class="py-4">
