@@ -125,6 +125,7 @@
         { username: "inventory",    password: "inventory123",    redirect: "/Inventory_dashboard" },
         { username: "CRM",          password: "CRM123",          redirect: "/CRM_Dashboard" },
         { username: "procurement",  password: "procurement123",  redirect: "/Procurement_Dashboard" },
+        { username: "user",  password: "user123",  redirect: "/User_Profile" },
     ];
 
     // =========================

@@ -38,7 +38,7 @@
             <img src="{{ asset('images/User_one.png') }}" class="w-8 h-8 rounded-full">
         
 
-        <a href="./U_Cart" class="flex items-center gap-2 text-white font-medium hover:text-gray-300">
+        <a href="/User_Cart" class="flex items-center gap-2 text-white font-medium hover:text-gray-300">
             <img src="{{ asset('images/grocery-store1.png') }}" class="w-6 h-6">
             Cart
         </a>
@@ -101,13 +101,13 @@
 
          <!-- Tabs -->
         <div class="flex gap-4 mb-6">
-            <a href="./Profile" class="px-6 py-2 text-gray-700 hover:text-gray-900 font-medium">
+            <a href="/User_Profile" class="px-6 py-2 text-gray-700 hover:text-gray-900 font-medium">
                 Profile
             </a>
-            <a href="./U_MyPurchase" class="px-6 py-2 text-gray-700 hover:text-gray-900 font-medium">
+            <a href="/User_MyPurchase" class="px-6 py-2 text-gray-700 hover:text-gray-900 font-medium">
                 My Purchase
             </a>
-            <a href="/U_OrderHistory" class="px-6 py-2  bg-blue-700 border-3 border-blue-900 text-white rounded-full font-medium">
+            <a href="/User_OrderHistory" class="px-6 py-2  bg-blue-700 border-3 border-blue-900 text-white rounded-full font-medium">
                 Order History
             </a>
         </div>

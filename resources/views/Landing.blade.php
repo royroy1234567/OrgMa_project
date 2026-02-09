@@ -36,7 +36,7 @@
 
     <!-- RIGHT: Desktop Links -->
     <div class="hidden md:flex items-center gap-6 mr-4 shrink-0">
-      <a href="/Profile" class="flex items-center gap-2 text-white font-medium hover:text-gray-300">
+      <a href="/Login" class="flex items-center gap-2 text-white font-medium hover:text-gray-300">
         <img src="{{ asset('images/user1.png') }}" class="w-6 h-6">
         Log In
       </a>

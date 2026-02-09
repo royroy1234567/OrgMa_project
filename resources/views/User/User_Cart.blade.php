@@ -38,7 +38,7 @@
     <div class="hidden md:flex items-center gap-6 mr-4">
         <img src="{{ asset('images/User_one.png') }}" class="w-8 h-8 rounded-full">
      
-      <a href="./U_Cart" class="flex items-center gap-2 text-white font-medium hover:text-gray-300">
+      <a href="/User_Cart" class="flex items-center gap-2 text-white font-medium hover:text-gray-300">
         <img src="{{ asset('images/grocery-store1.png') }}" class="w-6 h-6">
         Cart
       </a>
