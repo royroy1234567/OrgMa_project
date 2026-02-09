@@ -91,7 +91,7 @@
     <!-- Register -->
     <p class="text-center text-black mt-3 text-sm sm:text-base">
         Don't have an account?
-        <a href="#" class="text-blue-700 hover:underline font-bold">
+        <a href="/Register" class="text-blue-700 hover:underline font-bold">
             Register
         </a>
     </p>

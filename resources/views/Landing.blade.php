@@ -41,7 +41,7 @@
         Log In
       </a>
 
-      <a href="./U_ViewProduct" class="flex items-center gap-2 text-white font-medium hover:text-gray-300">
+      <a href="/User_Cart" class="flex items-center gap-2 text-white font-medium hover:text-gray-300">
         <img src="{{ asset('images/grocery-store1.png') }}" class="w-6 h-6">
         Cart
       </a>
@@ -61,7 +61,7 @@
       Log In
     </a>
 
-    <a href="./U_ViewProduct" class="flex items-center gap-2 text-white">
+    <a href="/User_Cart" class="flex items-center gap-2 text-white">
       <img src="{{ asset('images/grocery-store1.png') }}" class="w-6 h-6">
       Cart
     </a>
